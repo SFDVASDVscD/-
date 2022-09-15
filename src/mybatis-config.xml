@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--
+properties 标签中的配置可以提供整个配置文件使用，在任何位置都可以引入其中配置的值
+priperties 标签可以通过子标签property标签来配置一些子元素的信息，也可以配置外部的动态文件
+-->
+    <properties resource="mysql.properties"></properties>
+<!-- 类型别名
+  <typeAliases>
+        <typeAliases alias="User" type="com.xxx.entity.User"/>
+    </typeAliases>
+-->
+<!--    对事务的管理和连接池的配置-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+<!--                信息从mysql.properties中取-->
+                <property name="driver" value="${driverClassName}" />
+                <property name="url" value="${url}" />
+                <property name="username" value="${username}" />
+                <property name="password" value="${password}" />
+            </dataSource>
+        </environment>
+    </environments>
+<!--    mapper映射器-->
+    <mappers>
+<!--        映射文件方式1：一个一个的配置
+             <mapper recourse="com/xxx/mapper/UserMapper.xml"/>
+             <mapper class="com.xxx.mapper.UserMapper"/>
+<mapper resour>
+-->
+<!--        映射文件方式二：自动扫描包内的Mapper接口与配置文件-->
+        <package name="com.xxx.mapper"/>
+    </mappers>
+</configuration>
+<!--
+<configuration>：声明在标签里面的信息是配置信息
+
+<typeAliases>：声明在该标签里面的信息是一个个的别名
+
+<typealias>：声明要使用别名的对象（全路径）用java注解的话可以使用@Alias注解声明
+<environments>：声明在该标签内的环境变量，default表示默认的环境变量，一个environment表示一个jdbc连接数据库，如果有很多数据库的话我们要用到不同的环境变量
+
+<environment>：声明环境变量
+
+<transactionManager>：声明事务管理器      它的类型（type）有：JDBC（基于jdbc的事务） 还有 MANAGED（托管的事务）
+
+<dataSource>：声明数据源，数据源的类型有NOPOOLED ，POOLED ，还有JIDN，在数据量少的话用ONPOOLED，测试和开发过程一般用POOLED，实际运行使用JIDN
+
+<property>：jdbc连接的一些属性
+
+<mappers>：声明我们定义的一个个Mapper类，或者说是关联
+
+<mapper>：声明Mapper的路径
+-->
