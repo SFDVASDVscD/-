@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品</title>
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="stylesheet" href="Crush.css">
+    <!-- //引入js文件 -->
+    <script src="Crush.js"></script>
+</head>
+<body>
+
+<!--<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script>-->
+<!--    /* 鼠标点击文字特效 */-->
+<!--    var font = new Array("ylxznbl", "ywwy", "wlh", "wq", "cyf", "qz", "cyt", "ly", "yh", "yyh", "yjh", "yjr");-->
+<!--    var color = new Array('#ff0000', '#eb4310', '#f6941d', '#fbb417', '#ffff00', '#cdd541', '#99cc33', '#3f9337', '#219167', '#239676', '#24998d', '#1f9baa', '#0080ff', '#3366cc', '#333399', '#003366', '#800080', '#a1488e', '#c71585', '#bd2158', '#eec142', '#FEEE6D');-->
+<!--    var f_idx = Math.floor(Math.random() * 20) % font.length;-->
+<!--    var f_idx1 = Math.floor(Math.random() * 20) % font.length;-->
+<!--    var c_idx = Math.floor(Math.random() * 40) % font.length;-->
+<!--    jQuery(document).ready(function ($) {-->
+<!--        $("body").click(function (e) {-->
+
+<!--            var $i = $("<span />").text(font[f_idx] + ' ' + font[f_idx1]);-->
+<!--            f_idx = Math.floor(Math.random() * 20) % font.length;-->
+<!--            f_idx1 = Math.floor(Math.random() * 20) % font.length;-->
+<!--            c_idx = Math.floor(Math.random() * 40) % color.length;-->
+<!--            var x = e.pageX,-->
+<!--                y = e.pageY;-->
+<!--            $i.css({-->
+<!--                "z-index": 9999999999999999999999999,-->
+<!--                "top": y - 20,-->
+<!--                "left": x,-->
+<!--                "position": "absolute",-->
+<!--                "font-weight": "bold",-->
+<!--                "color": color[c_idx]-->
+<!--            });-->
+<!--            $("body").append($i);-->
+<!--            $i.animate({-->
+<!--                    "top": y - 180,-->
+<!--                    "opacity": 0-->
+<!--                },-->
+<!--                1500,-->
+<!--                function () {-->
+<!--                    $i.remove();-->
+<!--                });-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+    <header>
+        <div class="header">
+            <a href="../zhuyemian/morose.html">
+            <i class="fas fa-home" style></i>首页
+            </a>
+            <a href="../nvzhuang/Nefelibata.html">
+                <i class="fas  fa-reply" style></i>
+                返回
+            </a>
+            <img src="./imgsy/pb.png" alt="">
+            <a href="../yonghu/let_us_catch_up_today.html" class="yh">
+                <i class="fas fa-user-circle" style></i>
+                用户
+            </a>
+        </div>
+    </header>
+    <div class="shangbu">
+        <div class="card">
+            <div class="top-section">
+                <img id="image" src="imgs/1.jpg" alt="">
+                <div class="mask"></div>
+                <div class="big"><img src="imgs/1.jpg" alt="" class="bigImg" id="maskBig"></div>
+                <div class="nav">
+                    <img onclick="change_img(this)" src="imgs/1.jpg" alt="">
+                    <img onclick="change_img(this)" src="imgs/2.jpg" alt="">
+                    <img onclick="change_img(this)" src="imgs/3.jpg" alt="">
+                    <img onclick="change_img(this)" src="imgs/4.jpg" alt="">
+                </div>
+                <div class="massage"></div>
+            </div>
+        </div>
+        <div class="you">
+            <div class="name">【预约金】松塔树 VINTAGE古着春季黄色条纹印花贝壳袖公主百褶裙</div>
+            <div class="price"><i class="fas fa-cny"></i> 100</div>
+            <div class="xuanze">
+                <div class="s">S</div>
+                <div class="m">M</div>
+                <div class="l">L</div>
+            </div>
+            <div class="number">数量：<input type="text" value="1"> </div>
+            <div class="gwc">加入购物车</div>
+        </div>
+    </div>
+    <script>
+        var container=document.getElementById('image');
+        var container1=document.getElementById('maskBig')
+        function change_img(image){
+            container.src=image.src;
+            container1.src=image.src;
+        }
+    </script>
+    <div class="xiabu">
+        <div class="xiatou">详情</div>
+        <img src="imgs/1.jpg" alt="">
+        <img src="imgs/2.jpg" alt="">
+        <img src="imgs/3.jpg" alt="">
+        <img src="imgs/4.jpg" alt="">
+        <img src="imgs/5.jpg" alt="">
+        <img src="imgs/6.jpg" alt="">
+        <img src="imgs/8.jpg" alt="">
+        <img src="imgs/7.jpg" alt="">
+        <img src="imgs/9.jpg" alt="">
+        <img src="imgs/10.jpg" alt="">
+        <img src="imgs/11.jpg" alt="">
+        <img src="imgs/12.jpg" alt="">
+        <img src="imgs/13.jpg" alt="">
+        <img src="imgs/14.jpg" alt="">
+        <img src="imgs/15.jpg" alt="">
+        <img src="imgs/16.jpg" alt="">
+        <img src="imgs/17.jpg" alt="">
+        <img src="imgs/18.jpg" alt="">
+        <img src="imgs/19.jpg" alt="">
+        <img src="imgs/20.jpg" alt="">
+        <img src="imgs/21.jpg" alt="">
+        <img src="imgs/22.jpg" alt="">
+        <img src="imgs/23.jpg" alt="">
+        <img src="imgs/24.jpg" alt="">
+        <img src="imgs/25.jpg" alt="">
+        <img src="imgs/26.jpg" alt="">
+        <img src="imgs/27.jpg" alt="">
+        <img src="imgs/28.jpg" alt="">
+        <img src="imgs/29.jpg" alt="">
+        <img src="imgs/30.jpg" alt="">
+        <img src="imgs/31.jpg" alt="">
+        <img src="imgs/32.jpg" alt="">
+        <img src="imgs/33.jpg" alt="">
+        <img src="imgs/34.jpg" alt="">
+        <img src="imgs/35.jpg" alt="">
+        <img src="imgs/36.jpg" alt="">
+    </div>
+</body>
+</html>
