@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户界面</title>
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="stylesheet" href="let_us_catch_up_today.css">
+</head>
+<body>
+<div id="plane" style="height: 100px;width:100px;font-size: 60px;opacity: .8; position: absolute;display: flex;justify-content: center;align-items: center;z-index: 100;pointer-events: none">
+    <img src="../zhuyemian/img/鼠标7.gif" style="width: 50%">
+</div>
+<script>
+    let plane=document.getElementById('plane');
+    let deg=0,ex=0,ey=0,vx=0,vy=0,count=0;
+    window.addEventListener('mousemove',(e)=>{
+        ex=e.x-plane.offsetLeft-plane.clientWidth/2;
+        ey=e.y-plane.offsetTop-plane.clientHeight/2;
+        deg=360*Math.atan(ey/ex)/(2*Math.PI)+45;
+        if(ex<0){
+            deg+=180;
+        }
+        count=0;
+    })
+    function draw() {
+        plane.style.transform='rotate('+deg+'deg)';
+        if(count<100){
+            vx+=ex/100;
+            vy+=ey/100;
+        }
+        plane.style.left=vx+'px';
+        plane.style.top=vy+'px';
+        count++;
+    }
+    setInterval(draw,1);
+</script>
+    <div class="container">
+        <div class="left">
+            <ul>
+                <li class="zy item active">
+                    <i class="far fa-address-book icon"></i>
+                    我的主页
+                </li>
+                <li class=" item">
+                    <i class="fas fa-heart icon"></i>
+                    我的收藏
+                </li>
+                <li class=" item">
+                    <i class="fab fa-dropbox icon"></i>
+                    购物车
+                </li>
+                <li class=" item">
+                    <i class="far fa-user icon"></i>
+                    我的订单
+                </li>
+                <li class=" item">
+                    <i class="fas fa-clock icon"></i>
+                    足迹
+                </li>
+                <li class=" item">
+                    <i class="far fa-commenting icon"></i>
+                    售后
+                </li>
+                <hr>
+                <li class=" item">
+                    <i class="far fa-credit-card icon"></i>
+                    钱包
+                </li>
+                <li class=" item">
+                    <i class="fas fa-camera-retro icon"></i>
+                    分享
+                </li>
+            </ul>
+            <div class="user-info">
+                <img src="../zhuyemian/imgsy/yh.jpg" alt="">
+                <span>颦颦</span>
+                <i class="fas fa-gear icon"></i>
+            </div>
+        </div>
+        <div class="right">
+            <div class="top">
+                <span class="current-tag">我的主页</span>
+                <div class="btn">
+                    <i class="fas fa-search icon"></i>
+                </div>
+                <div class="btn">
+                    <i class="fas fa-plus-square icon"></i>
+                </div>
+            </div>
+            <div class="middle">pinpin</div>
+            <div class="handler"></div>
+            <div class="inbody">
+                <div class="adiv zhuye">
+                    <div class="toux">
+                        <img src="../zhuyemian/imgsy/yh.jpg" alt="">
+                    </div>
+                    <div class="zym">
+                        画着两株枯木，木上悬着一围玉带，又有一堆雪，雪下一股金簪。也有四句言词，道是：
+                        <br> 可叹停机德，堪怜咏絮才。玉带林中挂，金簪雪里埋。
+                    </div>
+                    <div class="massage">
+                        <div class="name">昵称：&nbsp;&nbsp;&nbsp;颦颦
+                            <br>性别：&nbsp;&nbsp;&nbsp;女
+                            <br>地址：&nbsp;&nbsp;&nbsp;荣国公府
+                            <br> 生日：&nbsp;&nbsp;&nbsp;农历二月十二日（花朝节）
+                            <div>
+                                <a href="#">更多资料</a>
+                                <a href="#">修改信息</a>
+                                <a href="#">管理地址</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <a href="#">照片墙</a>
+                        <a href="#" class="sc">上传照片</a>
+                        <div class="photos">
+                            <div class="font">
+                            <img src="../zhuyemian/imgsy/dy1.jpg" alt="">
+                            </div>
+                            <div class="shadow"></div>
+                            <div class="back">你的关心，是独我一份的，还是他人都有的，若不是独我一分的，那这份关心不要也罢</div>
+                        </div>
+                        <div class="photos p2">
+                            <div class="font">
+                            <img src="../zhuyemian/imgsy/dy4.jpg" alt="">
+                            </div>
+                            <div class="shadow"></div>
+                            <div class="back">哥哥算是有心了，竟还记得妹妹的喜好，如此妹妹便心满意足了</div>
+                        </div>
+                        <div class="photos p3">
+                            <div class="font">
+                            <img src="../zhuyemian/imgsy/dy3.jpg" alt="">
+                            </div>
+                            <div class="shadow"></div>
+                            <div class="back"><br>我知道你是信口胡诌，哄我开心罢了</div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="adiv soucang">
+                <div class="container2">
+                    <div class="card"><img src="./img/c1.jpg">
+                        <div class="text">
+                            <h3><span>【纽扣熊原创洋装】</span>月桂枝op定金中华风lolita春夏季连衣裙长裙</h3>
+                            <p style="font-size: 10px">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card"><img src="./img/c2.jpg">
+                        <div class="text">
+                            <h3><span>【纽扣熊原创洋装】</span>月桂枝op定金中华风lolita春夏季连衣裙长裙</h3>
+                            <p style="font-size: 10px">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card"><img src="./img/c3.jpg">
+                        <div class="text">
+                            <h3><span>【纽扣熊原创洋装】</span>月桂枝op定金中华风lolita春夏季连衣裙长裙</h3>
+                            <p style="font-size: 10px">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card"><img src="./img/c4.jpg">
+                        <div class="text">
+                            <h3><span>【纽扣熊原创洋装】</span>月桂枝op定金中华风lolita春夏季连衣裙长裙</h3>
+                            <p style="font-size: 10px">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card"><img src="./img/c8.jpg">
+                        <div class="text">
+                            <h3><span>【纽扣熊原创洋装】</span>月桂枝op定金中华风lolita春夏季连衣裙长裙</h3>
+                            <p style="font-size: 10px">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="adiv gouwuche">
+                <div class="container3">
+                    <div class="card">
+                        <div class="img"><img src="img/z3.jpg"></div>
+                        <div class="content">
+                            <h2>现货悠窝窝原创Lolita洋装敦煌五色霞国风汉元素汉改良连衣裙lo裙</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img"><img src="img/z1.jpg"></div>
+                        <div class="content">
+                            <h2>现货悠窝窝原创Lolita洋装敦煌五色霞国风汉元素汉改良连衣裙lo裙</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img"><img src="img/z5.jpg"></div>
+                        <div class="content">
+                            <h2>现货悠窝窝原创Lolita洋装敦煌五色霞国风汉元素汉改良连衣裙lo裙</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="adiv dingdan">
+                <div class="container5">
+                    <div class="card">
+                        <div class="photo">
+                            <img src="./img/m4.jpg">
+                        </div>
+                        <h2>阿英苗裔</h2>
+                        <h3>￥360</h3>
+                        <p><span>阿英苗艺 新款苗族服装 苗家盛装土家族瑶族舞台演出服</span><br><span>时间：</span>2022/5/14<br><span>规格：</span>M</p>
+                        <a href="#">了解更多</a>
+                    </div>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="./img/m3.jpg">
+                        </div>
+                        <h2>阿英苗裔</h2>
+                        <h3>￥360</h3>
+                        <p><span>阿英苗艺 新款苗族服装 苗家盛装土家族瑶族舞台演出服</span><br><span>时间：</span>2022/5/14<br><span>规格：</span>M</p>
+                        <a href="#">了解更多</a>
+                    </div>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="./img/m2.jpg">
+                        </div>
+                        <h2>阿英苗裔</h2>
+                        <h3>￥360</h3>
+                        <p><span>阿英苗艺 新款苗族服装 苗家盛装土家族瑶族舞台演出服</span><br><span>时间：</span>2022/5/14<br><span>规格：</span>M</p>
+                        <a href="#">了解更多</a>
+                    </div>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="./img/m1.jpg">
+                        </div>
+                        <h2>阿英苗裔</h2>
+                        <h3>￥360</h3>
+                        <p><span>阿英苗艺 新款苗族服装 苗家盛装土家族瑶族舞台演出服</span><br><span>时间：</span>2022/5/14<br><span>规格：</span>M</p>
+                        <a href="#">了解更多</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="adiv zuji">
+                <div class="container4">
+                    <div class="items">
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <img src="./img/c7.jpg">
+                    </div>
+                    <div class="items">
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <img src="./img/c5.jpg">
+                    </div>
+                    <div class="items">
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <img src="./img/c6.jpg">
+                    </div>
+                    <div class="items">
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <img src="./img/c4.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="adiv shouhou"><div style="font-size: 60px;font-family: '幼圆';color: rgba(255,255,255,.4);width: 600px;height: 50px;
+position: absolute;height: 100px;left: 300px">暂时没有售后哦……</div></div>
+
+            <div class="adiv qianbao"><div style="font-size: 60px;font-family: '幼圆';color: rgba(255,255,255,.4);width: 600px;height: 50px;
+position: absolute;height: 100px;left: 300px">请添加钱包</div></div>
+
+            <div class="adiv fenxiang">
+                <div class="card">
+                    <div class="img">
+                        <img src="./img/y1.jpg">
+                        <img src="./img/y2.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="content">
+                            峡谷还是要靠我来守护</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./img/j1.jpg">
+                        <img src="./img/j2.jpg">
+                    </div>
+                    <div class="detail">
+                        <div class="content">
+                            鹤归孤山莺鸣柳，风来吴山梅隐香。<br>
+                            秀水灵山隐剑踪，不闻江湖铸青锋。<br>
+                            逍遥此身君子意，一壶温酒向长空。<br>
+                            以人御剑，以心为剑，是为藏剑。<br>
+                            凭栏一心剑，静看花满天。</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <a href="../zhuyemian/morose.html">返回</a>
+    </div>
+    <script src="lucu.js"></script>
+</body>
+</html>
