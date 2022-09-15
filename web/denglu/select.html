@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择你要注册的角色</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+        #a{
+            text-decoration: none;
+            display: block;
+            width: 160px;
+            height: 30px;
+            position: absolute;
+            top: 660px;
+            left: 1000px;
+            color:#8d89f5;
+        }
+        #a:hover{
+            color: #4f4c8e;
+        }
+        .card{
+            position: relative;
+            width: 300px;
+            height: 350px;
+            margin: 20px;
+            top:250px;
+            border-radius: 20px;
+            transition: .5s;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+        .card:hover{
+            width: 600px;
+            transition-delay: 0s;
+        }
+        .card .circle{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            //background-color: #8d89f5;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card .circle::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:var(--clr);
+            clip-path: circle(120px at center);
+            transition: .5s;
+        }
+        .card:hover .circle::before{
+            clip-path: circle(400px at center);
+        }
+        .card .circle .logo{
+            position: relative;
+            width: 200px;
+            transition: .5s;
+            transition-delay: .5s;
+        }
+        .card:hover .circle .logo{
+            transform: scale(0);
+            transition-delay: 0s;
+        }
+        .content{
+            position: relative;
+            width: 50%;
+            left:20% ;
+            padding: 20px 20px 20px 40px;
+            opacity: 0;
+            transition: .5s;
+            visibility: hidden;
+        }
+        .card:hover .content{
+            left: -30%;
+            opacity: 1;
+            visibility: visible;
+            transition-delay: .5s;
+        }
+        .content h2{
+            color: #ffF;
+            text-transform:uppercase;
+            font-size: 2.5em;
+            line-height: 1em;
+        }
+        .content p{
+            color: #fff;
+        }
+        .content .a{
+            position: relative;
+            color: #111111;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .card .other{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0);
+            height: 400px;
+            transition: .5s;
+            transition-delay: 0s;
+        }
+        .card:hover .other{
+            left: 72%;
+            transform: translate(-50%,-50%) scale(1);
+            transition-delay: .5s;
+        }
+    /*    让它反应更迅速*/
+        @media (max-width:991px) {
+            .card{
+                width: auto;
+                max-width: 350px;
+                align-items: center;
+            }
+            .card:hover{
+                height: 600px;
+            }
+            .card:hover .other{
+                top: initial;
+                bottom: 30px;
+                left: 50%;
+                height: 300px;
+                transform: translate(-50%,0%) scale(1);
+            }
+            .card .content{
+                width: 100%;
+                left: 0;
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div style="font-weight: 800;font-size: 90px;font-family: '楷体';position: absolute;top: 140px">请选择您要注册的角色</div>
+<div class="card">
+    <div class="circle" style="--clr:#7c86c2">
+        <img src="imgs/g2.png" class="logo">
+    </div>
+    <div class="content">
+        <h2>Administrator</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Esse eos architecto repellendus quos fugiataspernatur necessitatibus facere</p>
+    <a href="#">Explore</a>
+    </div>
+    <img src="./imgs/g1.png" class="other">
+</div>
+<div class="card">
+    <div class="circle" style="--clr:#c27c9d">
+        <img src="imgs/yh1.png" class="logo">
+    </div>
+    <div class="content">
+        <h2>Consumer</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Esse eos architecto repellendus quos fugiataspernatur necessitatibus facere</p>
+        <a href="../regist.jsp">Explore</a>
+    </div>
+    <img src="./imgs/yh2.png" class="other">
+</div>
+<a href='../zhuyemian/morose.html' id="a">点击这里返回主页面</a>
+</body>
+</html>

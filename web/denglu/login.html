@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆页面</title>
+    <link rel="stylesheet" href="../webproject/fontawesome/css/all.css">
+    <style>
+        /* 设置nev大小 */
+        /* .nav{
+            width: 420px;
+            height: 48px;
+            background-color: #e8e7e3;
+            margin: 100 auto;
+        } */
+        /* 设置nev的li */
+        /* .nav li{ */
+            /* float: left; */
+            /* height: 100%; */
+            /* 设置li高度 */
+            /* line-height: 48px; */
+            /* 将文字在父元素中垂直居中 */
+        /* } */
+        *{
+            margin: 0;
+            padding: 0;
+            background-image: url(imgs/u=2715254956\,1142541802&fm=253&fmt=auto&app=138&f=JPEG.webp);
+        }
+        .nav{
+            /* font-size: 50px; */
+            /* color: #baf; */
+            width: 300px;
+            height:300px;
+            padding: 50px;
+            /* border: 10px red solid; */
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom:0 ;
+            left: 0;
+            right: 0;
+            /* opacity: .6; */
+            background-image: none;
+        }
+        form{
+            background-image: none;
+        }
+        .lll{
+            font-size: 50px;
+            font-family: 方正舒体;
+            width: 420px;
+            height: 200px;
+            margin-top: 50px;
+            padding: 10px;
+            /* border: 10px red solid;  */
+            margin-left: auto;
+            margin-right:auto;
+            /* background-image:url(imgs/u=3331457988\,2002546671&fm=253&fmt=auto&app=138&f=JPEG.webp); */
+            /* background-image: url(imgs/u=3168329137\,3263381309&fm=193&f=GIF.jpg); */
+        }
+        a{
+            text-decoration: none;
+            /* 取消超链接下面的下划线 */
+            color: #777;
+            display: block;
+            width: 90px;
+            font-size: 15px;
+            text-align: center;
+            /* height: 30px; */
+            /* background-color: rgba(253, 253, 27,.3); */
+            /* border: 1px #777 solid; */
+             /* padding-top: 10px; */
+        }
+        .aa{
+            float: left;
+        }
+        .aa::before{
+            content: "";
+
+        }
+        .c{
+            border-radius: 7px;
+            opacity: .7;
+        }
+        a:hover{
+            background-color: rgba(0, 0, 139,.6);
+            border: 2px rebeccapurple solid;
+            color: rgb(126, 118, 204);
+        }
+        li{
+            /* display:none; */
+            display: block;
+            list-style: none;
+            /* float: right; */
+        }
+        ul{
+            padding-left:0 ;
+        }
+        .aaa{
+            margin-top: 5px;
+            margin-left: 180px;
+            display: none;
+            float: initial;
+        }
+        .b:hover .aaa{
+            display: block;
+        }
+        .o{
+            width: 20px;
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="lll">
+        <h1>欢迎登陆</h1>
+    </div>
+    <div class="nav">
+        <br>
+        <form action="../webproject/yonghu/let_us_catch_up_today.html">
+            <div class="o">
+                <i class="far fa-user"></i> 
+            </div>
+            <input type="text" name="username" placeholder="用户名" class="c">
+            <br>
+            <br>
+            <div class="o">
+                <i class="fas fa-code"></i>
+            </div>
+            <input type="password" name="password" placeholder="password" class="c">
+            <br>
+            <br>
+            性别
+            <label ><i class="fas fa-mars"></i>男</label><input type="radio" name="sex" value="男" checked>
+            <label ><i class="fas fa-venus"></i>女</label><input type="radio" name="sex" value="女">
+            <br>
+            <br>
+            <i class="fas fa-envelope-square"></i>
+            <input type="email" name="email" placeholder="电子邮件地址" class="c">
+            <br><br>
+            <i class="fas fa-phone-square"></i> <input type="tel" name="phonenumber" placeholder="电话号码" class="c">
+            <br>
+            <br>
+            <ul>
+                <li>
+                <a href="#" class="aa">注册</a>
+                </li>
+                <li>
+                <a href="#" class="aa">忘记密码</a>
+                </li>
+                <li class="b"><a href="#" class="aa">第三方登录</a>
+                    <ul class="q">
+                        <br>
+                        <li class="aaa">
+                            <a href="qq.html" >QQ</a>
+                        </li>
+                        <li class="aaa">
+                            <a href="#">微信</a>
+                        </li>
+                        <li class="aaa">
+                            <a href="#">电话登陆</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <input type="submit" value="提交" id="1" class="c">
+            <input type="reset" id="2" class="c">
+        </form>
+    </div>
+</body>
+</html>
